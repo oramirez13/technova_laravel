@@ -114,12 +114,6 @@ En el enlace: https://www.apachefriends.org/es/index.html se descargó el servid
 
 Se instalaron además, las herramientas Laravel, Composer, Artisan y Xdebug.
 
-Tabla 1: Instalación exitosa de XAMPP en Linux.
-
-Imagen 2: XAMPP para Linux con los servidores activos.
-
-Imagen 3: Instalación exitosa de Xdebug en Linux.
-
 DISEÑO VISUAL, COLORES E IMÁGENES
 
 Se utilizará el recurso encontrado en este enlace: https://colorswall.com/es/palette/generate/o/49451 para asignar la paleta de colores del proyecto por componente.
