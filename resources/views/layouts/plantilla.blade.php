@@ -32,24 +32,45 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('proyectos.index') }}">{{ trans('Proyectos') }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('sprints.index') }}">{{ trans('Sprints') }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('tareas.index') }}">{{ trans('Tareas') }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('avances.index') }}">{{ trans('Avances') }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('usuarios.index') }}">{{ trans('Usuarios') }}</a>
-                    </li>
+                    @auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('proyectos.index') }}">{{ trans('Proyectos') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('sprints.index') }}">{{ trans('Sprints') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('tareas.index') }}">{{ trans('Tareas') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('avances.index') }}">{{ trans('Avances') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('usuarios.index') }}">{{ trans('Usuarios') }}</a>
+                        </li>
+                    @endauth
                 </ul>
 
-                <div class="d-flex ml-2">
+                <div class="d-flex align-items-center ml-2">
+                    @auth
+                        <span class="text-white mr-3">{{ auth()->user()->name }}</span>
+
+                        <form action="{{ route('logout') }}" method="POST" class="mr-3">
+                            @csrf
+                            <button type="submit" class="btn btn-sm btn-secundario">
+                                {{ trans('Cerrar sesión') }}
+                            </button>
+                        </form>
+                    @else
+                        <a href="{{ route('login') }}" class="btn btn-sm btn-secundario mr-2">
+                            {{ trans('Iniciar sesión') }}
+                        </a>
+
+                        <a href="{{ route('register') }}" class="btn btn-sm btn-principal mr-3">
+                            {{ trans('Registrarse') }}
+                        </a>
+                    @endauth
+
                     <a href="{{ route('idioma.cambiar', 'es') }}"
                         class="btn btn-sm mr-2 {{ app()->getLocale() == 'es' ? 'btn-principal' : 'btn-secundario' }}">
                         ES
@@ -68,6 +89,16 @@
             @if(session('success'))
                 <div class="alert alert-success">
                     {{ session('success') }}
+                </div>
+            @endif
+
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    <ul class="mb-0">
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
             @endif
 

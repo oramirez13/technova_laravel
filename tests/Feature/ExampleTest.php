@@ -24,6 +24,8 @@ class ExampleTest extends TestCase
     {
         $usuario = User::factory()->create();
 
+        $this->actingAs($usuario);
+
         $response = $this->post('/proyectos', [
             'nombre' => 'Proyecto de prueba',
             'descripcion' => 'Descripcion del proyecto de prueba',
@@ -41,6 +43,8 @@ class ExampleTest extends TestCase
     public function test_a_user_can_create_a_task(): void
     {
         $usuario = User::factory()->create();
+        $this->actingAs($usuario);
+
         $proyecto = Proyecto::factory()->create([
             'user_id' => $usuario->id,
         ]);
