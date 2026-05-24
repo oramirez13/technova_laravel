@@ -39,7 +39,7 @@ class UsuarioController extends Controller
         ]);
 
         return redirect()->route('usuarios.show', $usuario->id)
-            ->with('success', 'Usuario guardado correctamente.');
+            ->with('success', trans('Usuario guardado correctamente.'));
     }
 
     public function show($id)
@@ -83,7 +83,7 @@ class UsuarioController extends Controller
         $usuario->save();
 
         return redirect()->route('usuarios.show', $usuario->id)
-            ->with('success', 'Usuario actualizado correctamente.');
+            ->with('success', trans('Usuario actualizado correctamente.'));
     }
 
     public function destroy($id)
@@ -92,6 +92,6 @@ class UsuarioController extends Controller
         $usuario->delete();
 
         return redirect()->route('usuarios.index')
-            ->with('success', 'Usuario eliminado correctamente.');
+            ->with('success', trans('Usuario eliminado correctamente.'));
     }
 }

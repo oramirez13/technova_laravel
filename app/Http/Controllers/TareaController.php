@@ -36,7 +36,7 @@ class TareaController extends Controller
         $tarea = Tarea::create($datos);
 
         return redirect()->route('tareas.show', $tarea->id)
-            ->with('success', 'Tarea guardada correctamente.');
+            ->with('success', trans('Tarea guardada correctamente.'));
     }
 
     public function show($id)
@@ -68,7 +68,7 @@ class TareaController extends Controller
         $tarea->update($datos);
 
         return redirect()->route('tareas.show', $tarea->id)
-            ->with('success', 'Tarea actualizada correctamente.');
+            ->with('success', trans('Tarea actualizada correctamente.'));
     }
 
     public function destroy($id)
@@ -77,6 +77,6 @@ class TareaController extends Controller
         $tarea->delete();
 
         return redirect()->route('tareas.index')
-            ->with('success', 'Tarea eliminada correctamente.');
+            ->with('success', trans('Tarea eliminada correctamente.'));
     }
 }

@@ -37,7 +37,7 @@ class AvanceController extends Controller
         $avance = Avance::create($datos);
 
         return redirect()->route('avances.show', $avance->id)
-            ->with('success', 'Avance guardado correctamente.');
+            ->with('success', trans('Avance guardado correctamente.'));
     }
 
     public function show($id)
@@ -69,7 +69,7 @@ class AvanceController extends Controller
         $avance->update($datos);
 
         return redirect()->route('avances.show', $avance->id)
-            ->with('success', 'Avance actualizado correctamente.');
+            ->with('success', trans('Avance actualizado correctamente.'));
     }
 
     public function destroy($id)
@@ -78,6 +78,6 @@ class AvanceController extends Controller
         $avance->delete();
 
         return redirect()->route('avances.index')
-            ->with('success', 'Avance eliminado correctamente.');
+            ->with('success', trans('Avance eliminado correctamente.'));
     }
 }

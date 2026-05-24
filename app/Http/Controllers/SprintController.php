@@ -36,7 +36,7 @@ class SprintController extends Controller
         $sprint = Sprint::create($datos);
 
         return redirect()->route('sprints.show', $sprint->id)
-            ->with('success', 'Sprint guardado correctamente.');
+            ->with('success', trans('Sprint guardado correctamente.'));
     }
 
     public function show($id)
@@ -68,7 +68,7 @@ class SprintController extends Controller
         $sprint->update($datos);
 
         return redirect()->route('sprints.show', $sprint->id)
-            ->with('success', 'Sprint actualizado correctamente.');
+            ->with('success', trans('Sprint actualizado correctamente.'));
     }
 
     public function destroy($id)
@@ -77,6 +77,6 @@ class SprintController extends Controller
         $sprint->delete();
 
         return redirect()->route('sprints.index')
-            ->with('success', 'Sprint eliminado correctamente.');
+            ->with('success', trans('Sprint eliminado correctamente.'));
     }
 }

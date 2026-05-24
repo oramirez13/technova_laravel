@@ -36,7 +36,7 @@ class ProyectoController extends Controller
         $proyecto = Proyecto::create($datos);
 
         return redirect()->route('proyectos.show', $proyecto->id)
-            ->with('success', 'Proyecto guardado correctamente.');
+            ->with('success', trans('Proyecto guardado correctamente.'));
     }
 
     public function show($id)
@@ -68,7 +68,7 @@ class ProyectoController extends Controller
         $proyecto->update($datos);
 
         return redirect()->route('proyectos.show', $proyecto->id)
-            ->with('success', 'Proyecto actualizado correctamente.');
+            ->with('success', trans('Proyecto actualizado correctamente.'));
     }
 
     public function destroy($id)
@@ -77,6 +77,6 @@ class ProyectoController extends Controller
         $proyecto->delete();
 
         return redirect()->route('proyectos.index')
-            ->with('success', 'Proyecto eliminado correctamente.');
+            ->with('success', trans('Proyecto eliminado correctamente.'));
     }
 }
