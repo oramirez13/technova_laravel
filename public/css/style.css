@@ -71,12 +71,17 @@
 .table {
     width: 100%;
     border-color: #4C8EA5;
-    table-layout: fixed;
+    table-layout: auto;
+    min-width: 720px;
 }
 
 /* Permite que la tabla use scroll horizontal cuando haga falta */
 .table-responsive {
+    display: block;
+    width: 100%;
     overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Hace que el contenido largo se acomode dentro de cada celda */
@@ -84,8 +89,8 @@
 .table td {
     vertical-align: top;
     white-space: normal;
-    word-break: break-word;
-    overflow-wrap: break-word;
+    word-break: normal;
+    overflow-wrap: normal;
 }
 
 /* Ajusta el ancho de columnas cortas */
@@ -145,4 +150,80 @@
     font-size: 0.75rem;
     padding: 2px 6px;
     line-height: 1.4;
+}
+
+/* Ajustes para pantallas pequenas */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .navbar-brand {
+        white-space: normal;
+        line-height: 1.2;
+        max-width: 220px;
+    }
+
+    .navbar-collapse {
+        margin-top: 12px;
+    }
+
+    .navbar-collapse .d-flex {
+        flex-direction: column;
+        align-items: stretch !important;
+        margin-left: 0 !important;
+    }
+
+    .navbar-collapse .d-flex .btn,
+    .navbar-collapse .d-flex form,
+    .navbar-collapse .d-flex span {
+        margin-right: 0 !important;
+        margin-bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-collapse .d-flex form .btn {
+        width: 100%;
+    }
+
+    .nav-link,
+    .btn,
+    .card-title,
+    .table th,
+    .table td {
+        word-break: keep-all;
+        overflow-wrap: normal;
+        hyphens: none;
+    }
+
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+        border: 1px solid transparent;
+    }
+
+    .table {
+        width: auto;
+        min-width: 900px;
+        margin-bottom: 0;
+    }
+
+    .table th,
+    .table td {
+        white-space: nowrap;
+    }
+
+    .table-responsive > .table {
+        display: table;
+    }
+
+    .table td.col-acciones {
+        min-width: 160px;
+    }
 }
