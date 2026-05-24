@@ -1,0 +1,148 @@
+/* Barra de navegacion */
+.navbar {
+    background-color: #3C4C84;
+}
+
+/* Texto y enlaces de la barra de navegacion */
+.navbar-brand,
+.nav-link {
+    color: #FFFFFF !important;
+}
+
+/* Efecto hover en los enlaces de navegacion */
+.nav-link:hover {
+    color: #1CE1DB !important;
+}
+
+/* Botones principales */
+.btn-principal {
+    background-color: #1CE1DB;
+    color: #3C4C84;
+    border: none;
+}
+
+/* Efecto hover en botones principales */
+.btn-principal:hover {
+    background-color: #1C797C;
+    color: #FFFFFF;
+}
+
+/* Botones secundarios */
+.btn-secundario {
+    background-color: #4C8EA5;
+    color: #FFFFFF;
+    border: none;
+}
+
+/* Efecto hover en botones secundarios */
+.btn-secundario:hover {
+    background-color: #1C797C;
+    color: #FFFFFF;
+}
+
+/* Tarjetas */
+.card {
+    background-color: #FFFFFF;
+    border-top: 4px solid #1CE1DB;
+    box-shadow: 0 2px 4px rgba(76, 142, 165, 0.2); 
+}
+
+/* Encabezado de tablas */
+.table thead th {
+    background-color: #3C4C84;
+    color: #FFFFFF;
+}
+
+/* Filas alternas de tablas */
+.table tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #9EA4CC;
+}
+
+/* Efecto hover en filas de tablas */
+.table tbody tr:hover {
+    background-color: #89C6F1;
+}
+
+/* Bordes de tablas */
+.table {
+    width: 100%;
+    border-color: #4C8EA5;
+    table-layout: fixed;
+}
+
+/* Permite que la tabla use scroll horizontal cuando haga falta */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Hace que el contenido largo se acomode dentro de cada celda */
+.table th,
+.table td {
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Ajusta el ancho de columnas cortas */
+.table th:first-child,
+.table td:first-child {
+    width: 70px;
+}
+
+/* Da un ancho estable a la columna de acciones */
+.table th:last-child,
+.table td:last-child {
+    width: 180px;
+}
+
+/* Apila los botones de acciones siempre en columna vertical */
+.col-acciones {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    white-space: normal;
+}
+
+.col-acciones form.d-inline {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Elimina el margen por defecto del form dentro de acciones */
+.d-flex.flex-column form {
+    margin: 0;
+    padding: 0;
+}
+
+.col-acciones .btn,
+.col-acciones a,
+.col-acciones button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+/* Espacio entre botones de acciones apilados */
+.col-acciones .btn,
+.col-acciones a,
+.col-acciones button {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+/* Botones compactos para columnas de acciones en tablas */
+.btn-xs {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    line-height: 1.4;
+}
