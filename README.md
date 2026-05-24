@@ -88,6 +88,22 @@ RELACIÓN ENTRE TABLAS
 - Un proyecto puede contener múltiples spints.
 - Un sprint puede contener múltiples tareas y múltiples registros de avance.
 
+### Evidencias de Configuración
+
+<p align="center">
+  <img src="public/images/technova_laravel_01.png" alt="Instalación exitosa de XAMPP en Linux" width="800"/>
+</p>
+
+<p align="center">
+  <img src="public/images/technova_laravel_02.png" alt="XAMPP para Linux con los servidores activos" width="800"/>
+</p>
+
+<p align="center">
+  <img src="public/images/technova_laravel_03.png" alt="Instalación exitosa de Xdebug en Linux" width="800"/>
+</p>
+
+---
+
 ENTORNO DE DESARROLLO Y HERRAMIENTAS UTILIZADAS
 
 La instalación de todas las herramientas utilizadas en el presente curso de PHP intermedio se llevaron a cabo en el sistema operativo Arch Linux.
