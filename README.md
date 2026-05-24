@@ -91,15 +91,15 @@ RELACIÓN ENTRE TABLAS
 ### Evidencias de Configuración
 
 <p align="center">
-  <img src="public/images/technova_laravel_01.png" alt="Instalación exitosa de XAMPP en Linux" width="800"/>
+  <img src="img/technova_laravel_01.png" alt="XAMPP en Linux" width="800"/>
 </p>
 
 <p align="center">
-  <img src="public/images/technova_laravel_02.png" alt="XAMPP para Linux con los servidores activos" width="800"/>
+  <img src="img/technova_laravel_02.png" alt="XAMPP para Linux con los servidores activos" width="800"/>
 </p>
 
 <p align="center">
-  <img src="public/images/technova_laravel_03.png" alt="Instalación exitosa de Xdebug en Linux" width="800"/>
+  <img src="img/technova_laravel_03.png" alt="TechNova Solutions" width="800"/>
 </p>
 
 ---
