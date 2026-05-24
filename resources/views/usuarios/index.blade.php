@@ -36,7 +36,7 @@
                                         <div class="d-flex flex-column gap-1">
                                             <a href="{{ route('usuarios.show', $usuario->id) }}" class="btn btn-secundario btn-xs w-100">{{ trans('Ver') }}</a>
                                             <a href="{{ route('usuarios.edit', $usuario->id) }}" class="btn btn-principal btn-xs w-100">{{ trans('Editar') }}</a>
-                                            <form action="{{ route('usuarios.destroy', $usuario->id) }}" method="POST" style="margin:0; padding:0;" onsubmit="return confirm('¿Confirma la eliminación de este registro?');">
+                                            <form action="{{ route('usuarios.destroy', $usuario->id) }}" method="POST" style="margin:0; padding:0;" onsubmit="return confirm('{{ trans('¿Confirma la eliminación de este registro?') }}');">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger btn-xs w-100">{{ trans('Eliminar') }}</button>

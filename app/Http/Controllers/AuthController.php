@@ -40,14 +40,14 @@ class AuthController extends Controller
 
             // Redirige al listado de proyectos con un mensaje de éxito.
             return redirect()->route('proyectos.index')
-                ->with('success', 'Inicio de sesión realizado correctamente.');
+                ->with('success', trans('Inicio de sesión realizado correctamente.'));
         }
 
         // Si los datos no son válidos, vuelve al formulario con un error.
         return back()
             ->withErrors([
                 // Muestra un mensaje de error asociado al campo de correo.
-                'email' => 'Las credenciales ingresadas no son correctas.',
+                'email' => trans('Las credenciales ingresadas no son correctas.'),
             ])
             // Conserva el correo escrito para no obligar al usuario a escribirlo otra vez.
             ->onlyInput('email');
@@ -95,7 +95,7 @@ class AuthController extends Controller
 
         // Envía al usuario a la zona interna del sistema con un mensaje de confirmación.
         return redirect()->route('proyectos.index')
-            ->with('success', 'Usuario registrado correctamente.');
+            ->with('success', trans('Usuario registrado correctamente.'));
     }
 
     // Este método cierra la sesión activa del usuario.
@@ -112,6 +112,6 @@ class AuthController extends Controller
 
         // Redirige al inicio público con un mensaje de salida correcta.
         return redirect()->route('login')
-            ->with('success', 'Sesión cerrada correctamente.');
+            ->with('success', trans('Sesión cerrada correctamente.'));
     }
 }
