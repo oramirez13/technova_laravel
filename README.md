@@ -91,15 +91,27 @@ RELACIÓN ENTRE TABLAS
 ### Evidencias de Configuración
 
 <p align="center">
-  <img src="public/img/technova_laravel_01.png" alt="XAMPP en Linux" width="800"/>
+  <img src="public/img/technova_laravel_06.png" alt="Sign in" width="800"/>
 </p>
 
 <p align="center">
-  <img src="public/img/technova_laravel_02.png" alt="XAMPP para Linux con los servidores activos" width="800"/>
+  <img src="public/img/technova_laravel_05.png" alt="Sign up" width="800"/>
 </p>
 
 <p align="center">
-  <img src="public/img/technova_laravel_03.png" alt="TechNova Solutions" width="800"/>
+  <img src="public/img/technova_laravel_04.png" alt="Dashboard" width="800"/>
+</p>
+
+<p align="center">
+  <img src="public/img/technova_laravel_01.png" alt="TechNova Solutions UI/UX" width="800"/>
+</p>
+
+<p align="center">
+  <img src="public/img/technova_laravel_02.png" alt="Hamburger menu" width="800"/>
+</p>
+
+<p align="center">
+  <img src="public/img/technova_laravel_03.png" alt="Dashboard" width="800"/>
 </p>
 
 ---
