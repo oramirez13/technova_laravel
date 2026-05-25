@@ -1,6 +1,6 @@
-TECHNOVA SOLUTIONS
+# TECHNOVA SOLUTIONS
 
-DESCRIPCIÓN
+## DESCRIPCIÓN
 
 TechNova Solutions es una plataforma web de gestión de proyectos y tareas para empresas de desarrollo de software.
 
@@ -8,7 +8,9 @@ TechNova Solutions es una PYME de tecnología que desarrolla un producto de soft
 
 El mercado objetivo son empresas que trabajan de manera simultánea en múltiples proyectos, cada uno con diferentes fases, equipos y plazos. Estas empresas enfrentan desafíos operativos comunes que el producto de TechNova Solutions viene a resolver.
 
-JUSTIFICACIÓN
+---
+
+## JUSTIFICACIÓN
 
 Ofrecer un producto de software de calidad que responda a la necesidad real de las empresas de organizar sus flujos de trabajo. La plataforma está pensada para equipos que manejan varios proyectos al mismo tiempo y necesitan una herramienta centralizada, accesible desde el navegador, sin instalaciones adicionales en cada computadora.
 
@@ -22,73 +24,72 @@ En la actualidad, los equipos de desarrollo que utilizan correos electrónicos p
 - Duplicación de esfuerzos y comunicación ineficiente.
 - Imposibilidad de auditar el trabajo completado.
 
-La plataforma TechNova Solutions ofrece a sus usuarios las siguientes funcionalidades:
+### Funcionalidades principales:
 
-- Organizar proyectos: cada proyecto tiene un nombre, descripción, estado (activo, pausado, completado) y un responsable asignado.
-- Planificar con sprints: los proyectos se dividen en ciclos de trabajo llamados sprints, cada uno con una fecha de inicio y fin clara.
-- Administrar tareas: dentro de cada sprint, los equipos pueden crear tareas específicas con título, descripción y estado de progreso.
-- Registrar avances: los miembros del equipo pueden documentar el trabajo realizado en cada sprint con descripción de actividades y horas trabajadas.
-- Acceso seguro: cada usuario tiene su propia cuenta con credenciales, garantizando que solo personal autorizado acceda a la información.
+- Organizar proyectos: Cada proyecto tiene un nombre, descripción, estado (activo, pausado, completado) y un responsable asignado.
+- Planificar con sprints: Los proyectos se dividen en ciclos de trabajo llamados sprints, cada uno con una fecha de inicio y fin clara.
+- Administrar tareas: Dentro de cada sprint, los equipos pueden crear tareas específicas con título, descripción y estado de progreso.
+- Registrar avances: Los miembros del equipo pueden documentar el trabajo realizado en cada sprint con descripción de actividades y horas trabajadas.
+- Acceso seguro: Cada usuario tiene su propia cuenta con credenciales, garantizando que solo personal autorizado acceda a la información.
 
 La aplicación es accesible desde el navegador web, por lo que no requiere instalación en las computadoras de los miembros del equipo. Basta con conectarse a Internet, ingresar el usuario y contraseña, y tener acceso a toda la información del equipo de forma centralizada, ordenada y en tiempo real.
 
-TechNova Solutions se presenta como una empresa de tecnología que identifica una necesidad concreta en el mercado del desarrollo de software:
-
-- la falta de herramientas accesibles y simples para gestionar proyectos.
+TechNova Solutions se presenta como una empresa de tecnología que identifica una necesidad concreta en el mercado del desarrollo de software: la falta de herramientas accesibles y simples para gestionar proyectos.
 
 Herramientas como Jira o Asana existen en el mercado, pero su costo y complejidad las hacen poco accesibles para equipos pequeños. TechNova Solutions busca cubrir ese espacio con un producto propio, desarrollado con tecnología moderna, mantenible y escalable.
 
-OBJETIVO GENERAL
+---
+
+## OBJETIVOS
+
+### Objetivo General
 
 Desarrollar una aplicación web funcional, permitiendo a sus usuarios gestionar proyectos, sprints, tareas y avances de forma centralizada.
 
-OBJETIVOS ESPECÍFICOS
+### Objetivos Específicos
 
 - Crear una estructura de proyecto funcional con la carpeta de proyectos, controladores y vistas organizadas correctamente.
 - Definir rutas simples que permitan navegar a la página de inicio y al listado de proyectos (Pavón Puertas, J., 2014).
-- Crear controladores que reciban las solicitudes del navegador y preparen los datos para las vistas (Rincón Cardona, J. J. (2025).
+- Crear controladores que reciban las solicitudes del navegador y preparen los datos para las vistas (Rincón Cardona, J. J., 2025).
 - Diseñar plantillas HTML que muestren la información de forma ordenada y atractiva (Pavón Puertas, J., 2014).
 - Definir la estructura de las 5 tablas de la base de datos (López Quijado, J., 2014).
 - Documentar el proyecto con explicaciones de cada entidad, tabla y decisión de diseño (Eslava Muñoz, V. J., 2018).
 
-Este proyecto es importante por las siguientes razones:
+### Importancia del Proyecto
 
 - El usuario obtendrá una herramienta que mejora su productividad.
 - El equipo ahorrará tiempo en comunicación y búsqueda de información.
-- TechNova Solutions puede escalar la aplicación con nuevas funcionalidades en el futuro.
+- TechNova Solutions puede escalator la aplicación con nuevas funcionalidades en el futuro.
 
-PRINCIPALES ENTIDADES DE PROGRAMACIÓN
+---
 
-- User: es un miembro del equipo que puede crear proyectos, modificarlos y ser responsable de ellos.
+## PRINCIPALES ENTIDADES DE PROGRAMACIÓN
+
+- User: Es un miembro del equipo que puede crear proyectos, modificarlos y ser responsable de ellos.
 - Proyecto: Representa una lista de tareas organizadas para darle respuesta a la solicitud de un cliente o producto.
-- Sprint: Representa un ciclo de trabajo compuesta generalmente por una o dos semanas.
+- Sprint: Representa un ciclo de trabajo compuesto generalmente por una o dos semanas.
 - Tarea: Representa una tarea específica dentro del sprint.
 - Avance: Representa el registro de trabajo en un sprint.
 
-TABLAS DE LA BASE DE DATOS
+---
 
-Tabla: usuarios
-Propósito: Almacenar los datos de los usuarios que usan la plataforma.
+## TABLAS DE LA BASE DE DATOS
 
-Tabla: proyectos
-Propósito: Almacenar la información de los proyectos. Cada proyecto pertenece a un usuario responsable.
+- usuarios: Almacenar los datos de los usuarios que usan la plataforma.
+- proyectos: Almacenar la información de los proyectos. Cada proyecto pertenece a un usuario responsable.
+- sprints: Dividir los proyectos en ciclos de trabajo. Organiza el trabajo en períodos definidos con fechas claras.
+- tareas: Desglosar el trabajo en tareas específicas. Permite seguimiento detallado del progreso dentro de cada sprint.
+- avances: Registrar el trabajo completado. Proporciona evidencia y seguimiento de las actividades realizadas.
 
-Tabla: sprints
-Propósito: Dividir los proyectos en ciclos de trabajo. Organiza el trabajo en períodos definidos con fechas claras.
+### Relación entre tablas:
 
-Tabla: tareas
-Propósito: Desglosar el trabajo en tareas específicas. Permite seguimiento detallado del progreso dentro de cada sprint.
-
-Tabla: avances
-Propósito: Registrar el trabajo completado. Proporciona evidencia y seguimiento de las actividades realizadas.
-
-RELACIÓN ENTRE TABLAS
-
-- Un usuario puede iniciar y ser respondable de múltiples proyectos.
-- Un proyecto puede contener múltiples spints.
+- Un usuario puede iniciar y ser responsable de múltiples proyectos.
+- Un proyecto puede contener múltiples sprints.
 - Un sprint puede contener múltiples tareas y múltiples registros de avance.
 
 ---
+
+## INTERFAZ Y LOGS DE LA APLICACIÓN
 
 <p align="center">
   <img src="public/img/technova_laravel_01.png" alt="Sign in" width="800"/>
@@ -116,68 +117,68 @@ RELACIÓN ENTRE TABLAS
 
 ---
 
-ENTORNO DE DESARROLLO Y HERRAMIENTAS UTILIZADAS
+## ENTORNO DE DESARROLLO Y HERRAMIENTAS UTILIZADAS
 
 La instalación de todas las herramientas utilizadas en el presente curso de PHP intermedio se llevaron a cabo en el sistema operativo Arch Linux.
 
 Se instalaron las siguientes herramientas:
 
-En el enlace: https://www.apachefriends.org/es/index.html se descargó el servidor LAMPP, que equivale a XAMPP en entornos Linux (Nixon, R. (2019).
+- En el enlace https://www.apachefriends.org/es/index.html se descargó el servidor LAMPP, que equivale a XAMPP en entornos Linux (Nixon, R., 2019).
+- Se instalaron además, las herramientas Laravel, Composer, Artisan y Xdebug.
 
-Se instalaron además, las herramientas Laravel, Composer, Artisan y Xdebug.
+---
 
-DISEÑO VISUAL, COLORES E IMÁGENES
+## DISEÑO VISUAL, COLORES E IMÁGENES
 
-Se utilizará el recurso encontrado en este enlace: https://colorswall.com/es/palette/generate/o/49451 para asignar la paleta de colores del proyecto por componente.
+Se utilizará el recurso encontrado en https://colorswall.com/es/palette/generate/o/49451 para asignar la paleta de colores del proyecto por componente.
 
-Navegación:
+### Navegación
 
 - Fondo: Azul Oscuro Profundo (#3C4C84)
 - Texto: Blanco (#FFFFFF)
 - Logo: Turquesa Primario (#1CE1DB)
 - Hover en enlaces: Turquesa Primario (#1CE1DB)
 
-Botones Principales:
+### Botones Principales
 
 - Fondo: Turquesa Primario (#1CE1DB)
 - Texto: Azul Oscuro Profundo (#3C4C84)
 - Hover: Verde Azulado Oscuro (#1C797C)
 
-Botones Secundarios:
+### Botones Secundarios
 
 - Fondo: Azul Grisáceo (#4C8EA5)
 - Texto: Blanco (#FFFFFF)
 - Hover: Verde Azulado Oscuro (#1C797C)
 
-Tarjetas (Cards):
+### Tarjetas (Cards)
 
 - Fondo: Blanco (#FFFFFF)
 - Borde superior: 4px en Turquesa Primario (#1CE1DB)
-- Sombra: sutil con Azul Grisáceo (#4C8EA5) en 0.2 opacidad
+- Sombra: Sutil con Azul Grisáceo (#4C8EA5) en 0.2 opacidad
 
-Tablas:
+### Tablas
 
 - Encabezado: Fondo Azul Oscuro Profundo (#3C4C84), texto blanco
 - Filas alternas: Blanco y Púrpura/Lavanda Suave (#9EA4CC)
 - Hover en fila: Azul Claro (#89C6F1)
 - Bordes: Azul Grisáceo (#4C8EA5)
 
-CONCLUSIONES
+---
+
+## CONCLUSIONES
 
 TechNova Solutions es una PYME de tecnología que desarrolla un producto de software para resolver un problema real del mercado: la falta de herramientas de bajo costo accesibles, para que equipos de desarrollo gestionen sus proyectos de forma centralizada. La plataforma permite a sus usuarios organizar proyectos, planificar sprints, administrar tareas y registrar avances desde el navegador, sin instalaciones adicionales.
 
 En este primer avance se establece la base del producto, definiendo las principales entidades de programación, las tablas de la base de datos y la selección de la paleta de colores, imágenes y estilos a utilizar.
 
-BIBLIOGRAFÍA
+---
 
-Eslava Muñoz, V. J. (2018). El nuevo PHP: conceptos avanzados: (1.ª ed.). Bubok Publishing S.L. https://elibro.net/es/ereader/ufidelitas/51353?page=12
+## BIBLIOGRAFÍA
 
-Flórez Fernández, H., & Hernández Rodríguez, J. (2021). Aplicaciones web con PHP: (1.ª ed.). RA-MA Editorial. https://elibro.net/es/ereader/ufidelitas/230578?page=294
-
-López Quijado, J. (2014). Domine PHP y MySQL: (2.ª ed.). RA-MA Editorial. https://elibro.net/es/ereader/ufidelitas/106410?page=32
-
-Nixon, R. (2019). Aprender PHP, MySQL y JavaScript: (5.ª ed.). Marcombo. https://elibro.net/es/ereader/ufidelitas/280027?page=68
-
-Pavón Puertas, J. (2014). Creación de un portal con PHP y MySQL: (4.ª ed.). RA-MA Editorial. https://elibro.net/es/ereader/ufidelitas/106413?page=36
-
-Rincón Cardona, J. J. (2025). Aprenda desarrollo web con Laravel desde cero: (1.ª ed.). Marcombo. https://elibro.net/es/ereader/ufidelitas/281767?page=12
+- Eslava Muñoz, V. J. (2018). _El nuevo PHP: conceptos avanzados_ (1.ª ed.). Bubok Publishing S.L. https://elibro.net/es/ereader/ufidelitas/51353?page=12
+- Flórez Fernández, H., & Hernández Rodríguez, J. (2021). _Aplicaciones web con PHP_ (1.ª ed.). RA-MA Editorial. https://elibro.net/es/ereader/ufidelitas/230578?page=294
+- López Quijado, J. (2014). _Domine PHP y MySQL_ (2.ª ed.). RA-MA Editorial. https://elibro.net/es/ereader/ufidelitas/106410?page=32
+- Nixon, R. (2019). _Aprender PHP, MySQL y JavaScript_ (5.ª ed.). Marcombo. https://elibro.net/es/ereader/ufidelitas/280027?page=68
+- Pavón Puertas, J. (2014). _Creación de un portal con PHP y MySQL_ (4.ª ed.). RA-MA Editorial. https://elibro.net/es/ereader/ufidelitas/106413?page=36
+- Rincón Cardona, J. J. (2025). _Aprenda desarrollo web con Laravel desde cero_ (1.ª ed.). Marcombo. https://elibro.net/es/ereader/ufidelitas/281767?page=12
