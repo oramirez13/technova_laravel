@@ -33,7 +33,9 @@ Route::middleware('guest')->group(function () {
         ->name('login');
 
     // Procesa los datos enviados desde el formulario de inicio de sesión.
+    // Rate limiting: 5 intentos por minuto.
     Route::post('/iniciar-sesion', [AuthController::class, 'iniciarSesion'])
+        ->middleware('throttle:5,1')
         ->name('login.store');
 
     // Muestra el formulario para registrar un nuevo usuario.
@@ -41,7 +43,9 @@ Route::middleware('guest')->group(function () {
         ->name('register');
 
     // Guarda en la base de datos el nuevo usuario registrado.
+    // Rate limiting: 3 registros por minuto.
     Route::post('/registro', [AuthController::class, 'registrar'])
+        ->middleware('throttle:3,1')
         ->name('register.store');
 });
 

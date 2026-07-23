@@ -71,8 +71,8 @@ class AuthController extends Controller
             'email' => 'required|email|max:255|unique:users,email',
             // Solicita que el rol pertenezca a una lista básica de opciones válidas.
             'rol' => 'required|in:administrador,desarrollador,analista,tester',
-            // Solicita una contraseña con confirmación para reducir errores de escritura.
-            'password' => 'required|string|min:8|confirmed',
+            // Solicita una contraseña con confirmación, minimo 8 caracteres, una mayúscula y un número.
+            'password' => 'required|string|min:8|confirmed|regex:/[A-Z]/|regex:/[0-9]/',
         ]);
 
         // Crea el nuevo usuario con los datos validados.
