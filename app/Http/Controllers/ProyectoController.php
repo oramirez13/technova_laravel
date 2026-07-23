@@ -5,21 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Proyecto;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class ProyectoController extends Controller
 {
-    // Verifica que el usuario actual sea el responsable del proyecto o tenga rol privilegiado.
-    private function verificarPermiso($proyecto)
-    {
-        $rol = Auth::user()->rol ?? '';
-        $esPrivilegiado = in_array($rol, ['administrador', 'manager']);
-
-        if (!$esPrivilegiado && $proyecto->user_id !== Auth::id()) {
-            abort(403, 'No tienes permisos para gestionar este proyecto.');
-        }
-    }
-
     public function index()
     {
         $proyectos = Proyecto::with('usuario')
@@ -54,7 +42,6 @@ class ProyectoController extends Controller
     public function show($id)
     {
         $proyecto = Proyecto::with('usuario', 'sprints')->findOrFail($id);
-        $this->verificarPermiso($proyecto);
 
         return view('proyectos.show', compact('proyecto'));
     }
@@ -62,8 +49,6 @@ class ProyectoController extends Controller
     public function edit($id)
     {
         $proyecto = Proyecto::findOrFail($id);
-        $this->verificarPermiso($proyecto);
-
         $usuarios = User::orderBy('name')->get();
 
         return view('proyectos.edit', compact('proyecto', 'usuarios'));
@@ -72,7 +57,6 @@ class ProyectoController extends Controller
     public function update(Request $request, $id)
     {
         $proyecto = Proyecto::findOrFail($id);
-        $this->verificarPermiso($proyecto);
 
         $datos = $request->validate([
             'nombre' => 'required|string|max:150',
@@ -90,8 +74,6 @@ class ProyectoController extends Controller
     public function destroy($id)
     {
         $proyecto = Proyecto::findOrFail($id);
-        $this->verificarPermiso($proyecto);
-
         $proyecto->delete();
 
         return redirect()->route('proyectos.index')
